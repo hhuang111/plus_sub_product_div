@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> 
+<meta content="yes" name="apple-mobile-web-app-capable" /> 
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<meta content="telephone=no" name="format-detection" /> 
+<meta content="false" id="twcClient" name="twcClient" /> 
+<script src="jquery-1.8.0.min.js" > </script>
+<title>手机APP-欢迎页</title>
+
+<link href="images/my.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="r-gongju">
+       <a href="help.html"><img src="images/r-help.png" /></a>
+       <a href="about.html"><img src="images/r-about.png" /></a>
+       <a href="index.html"><img src="images/r-exit.png" /></a>
+    </div>
+   <div class="tipbox">
+     <div class="tip-a-box">
+        <li><a href="javascript:showrenwu()"><span class="img"><img src="images/renwu.png" /></span><span class="txt">我的任务</span></a></li>
+        <li><a href="genzong.html"><span class="img"><img src="images/genzong.png" /></span><span class="txt">业务跟踪</span></a></li>
+        <li><a href="caigou.html"><span class="img"><img src="images/caigou.png" /></span><span class="txt">采　购</span></a></li>
+        <li><a href="xiaoshou.html"><span class="img"><img src="images/xiaoshou.png" /></span><span class="txt">销　售</span></a></li>
+        <li><a href="kucun.html"><span class="img"><img src="images/kucun.png" /></span><span class="txt">库　存</span></a></li>
+        <li><a href="baobiao.html"><span class="img"><img src="images/baobiao.png" /></span><span class="txt">报　表</span></a></li>
+        <li><a href="ziliao.html"><span class="img"><img src="images/ziliao.png" /></span><span class="txt">资　料</span></a></li>
+        <li><a href="shezhi.html"><span class="img"><img src="images/shezhi.png" /></span><span class="txt">设　置</span></a></li>
+        <div class="qc"></div>
+     </div>
+   </div>
+   
+   <div id="renwu" class="in-tanchu" style="display:none">
+      我的任务
+   </div>
+   <div id="gz" class="in-tanchu" style="display:none">
+      跟踪
+   </div>
+   <div id="cg" class="in-tanchu" style="display:none">
+      采购
+   </div>
+   <div id="cg" class="in-tanchu" style="display:none">
+      销售
+   </div>
+   <div id="cg" class="in-tanchu" style="display:none">
+      采购
+   </div>
+   <div id="cg" class="in-tanchu" style="display:none">
+      采购
+   </div>
+   <div id="cg" class="in-tanchu" style="display:none">
+      资料
+   </div>
+   <div id="cg" class="in-tanchu" style="display:none">
+      设置
+   </div>
+<div id="bg" class="bgggg" style="display:none;"></div>
+ 
+<script language="javascript" type="text/javascript">
+   //我的任务
+function showrenwu(){
+document.getElementById('renwu').style.display='block';
+ document.getElementById('bg').style.display='block';
+
+}
+function closerenwu(){
+document.getElementById('renwu').style.display='none';
+document.getElementById('bg').style.display='none';
+ 
+}
+   //业务跟踪
+function showgz(){
+document.getElementById('gz').style.display='block';
+document.getElementById('popIframe').style.display='block';
+document.getElementById('bg').style.display='block';
+}
+function closegz(){
+document.getElementById('gz').style.display='none';
+document.getElementById('bg').style.display='none';
+document.getElementById('popIframe').style.display='none';
+}
+  
+</script>
+<script type="text/javascript"> 
+$(function(){ 
+$("#bg").bind("click",function(e){ 
+var target = $(e.target); 
+if(target.closest(".in-tanchu").length == 0){ 
+$(".in-tanchu").hide(); 
+$(this).hide(); 
+} 
+}) 
+}) 
+</script>
+</body>
+</html>
